@@ -26,7 +26,7 @@ class MapGenerator {
 		for (int i = 0; i < map.length; i++) {
 			for (int j=0; j< map[0].length;j++) {
 				if(map[i][j] > 0) {
-					g.setColor(new Color( 188, 74, 60)); // brick color
+					g.setColor(new Color(0XFF8787)); // brick color
 					g.fillRect(j*brickWidth + 80, i*brickHeight + 50, brickWidth, brickHeight);
 					
 					g.setStroke(new BasicStroke(4));
@@ -76,7 +76,7 @@ class GamePlay extends JPanel implements KeyListener, ActionListener  {
 	public void paint(Graphics g) {
 		
 		//background color
-		g.setColor(Color.black);
+		g.setColor(Color.YELLOW);
 		g.fillRect(1, 1, 692, 592);
 		
 		map.draw((Graphics2D)g);
@@ -91,8 +91,8 @@ class GamePlay extends JPanel implements KeyListener, ActionListener  {
 		g.setColor(Color.RED);  // ball color
 		g.fillOval(ballposX, ballposY, 20, 20);
 		
-		g.setColor(Color.white);
-		g.setFont(new Font("Arial", Font.BOLD, 25));
+		g.setColor(Color.black);
+		g.setFont(new Font("MV Boli", Font.BOLD, 25));
 		g.drawString("Score: " + score, 520, 30);
 		
 		
@@ -101,10 +101,10 @@ class GamePlay extends JPanel implements KeyListener, ActionListener  {
 			ballXdir = 0;
 			ballYdir = 0;
 			g.setColor(new Color(0XFF6464));
-			g.setFont(new Font("Arial", Font.BOLD, 30));
+			g.setFont(new Font("MV Boli", Font.BOLD, 30));
 			g.drawString("You Won, Score: " + score, 190, 300);
 			
-			g.setFont(new Font("Arial", Font.BOLD, 20));
+			g.setFont(new Font("MV Boli", Font.BOLD, 20));
 			g.drawString("Press Enter to Restart.", 230, 350);
 		}
 		
@@ -112,11 +112,11 @@ class GamePlay extends JPanel implements KeyListener, ActionListener  {
 			play = false;
 			ballXdir = 0;
 			ballYdir = 0;
-			g.setColor(Color.white);
-			g.setFont(new Font("Arial", Font.BOLD, 30));
+			g.setColor(Color.BLACK);
+			g.setFont(new Font("MV Boli", Font.BOLD, 30));
 			g.drawString("Game Over, Score: " + score, 190, 300);
 			
-			g.setFont(new Font("Arial", Font.BOLD, 20));
+			g.setFont(new Font("MV Boli", Font.BOLD, 20));
 			g.drawString("Press Enter to Restart", 230, 350);
 				
 		} 
